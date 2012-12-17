@@ -1,0 +1,1 @@
+﻿// Collection of booksvar books = ds.Book.all();books// Collection of cities//var cities = ds.City.all();//cities

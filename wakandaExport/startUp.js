@@ -1,0 +1,1 @@
+﻿//this is our bootstrap file. It runs when we launch the server.// Activate our export request handler on the server.addHttpRequestHandler('/exportCities', 'requestHandlers.js', 'exportCities');addHttpRequestHandler('/exportBooks', 'requestHandlers.js', 'exportBooks');addHttpRequestHandler('^/exportDataClass', 'requestHandlers.js', 'exportDataClass');
