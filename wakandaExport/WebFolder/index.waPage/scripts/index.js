@@ -1,9 +1,7 @@
 ﻿
 WAF.onAfterInit = function onAfterInit() {// @lock
 	var wExportURL = window.location.href,
-		wExportPathname = window.location.pathname,
-		wExportURLTrunc = wExportURL.replace(wExportPathname, ''),
-		iframe = $("#iframeexport");
+	iFrame;
 		
 // @region namespaceDeclaration// @startlock
 	var exportBooksButton = {};	// @button
@@ -15,24 +13,28 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	exportBooksButton.click = function exportBooksButton_click (event)// @startlock
 	{// @endlock
 		// Export Books
+		iframe = $("#iframeexport");
+		
 		if (iframe.length === 0) {
 			$('body').append('<iframe id="iframeexport"></iframe>');
 			iframe = $("#iframeexport");
 		}
 		iframe.hide();
-		iframe.attr("src", wExportURLTrunc + "/exportDataClass/Book");
+		iframe.attr("src", wExportURL + "exportDataClass/Book");
 		
 	};// @lock
 
 	exportCitiesButton.click = function exportCitiesButton_click (event)// @startlock
 	{// @endlock
 		//Export cities
+		iframe = $("#iframeexport");
+		
 		if (iframe.length === 0) {
 			$('body').append('<iframe id="iframeexport"></iframe>');
 			iframe = $("#iframeexport");
 		}
 		iframe.hide();
-		iframe.attr("src", wExportURLTrunc + "/exportDataClass/City");
+		iframe.attr("src", wExportURL + "exportDataClass/City");
 	};// @lock
 
 // @region eventManager// @startlock
